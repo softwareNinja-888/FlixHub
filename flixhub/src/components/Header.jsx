@@ -6,7 +6,7 @@ import user from '/user.webp'
 
 export function Header(){
     return (
-        <div className="flex flex-col gap-10 py-7 px-3">
+        <div className="flex flex-col gap-10 py-7 px-3 mb-20">
             <div className="">
                 <div className="flex justify-between ">
                     <div className="flex justify-center items-center gap-2">
