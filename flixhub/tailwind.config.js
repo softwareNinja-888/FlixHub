@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         main:'#00A8E1',
-        background: '#141414'
+        background: '#01133d',
+        // second: ''
       },
       fontFamily: {
         geist: ['geist','sans-serif'],

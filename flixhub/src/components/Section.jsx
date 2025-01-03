@@ -2,7 +2,6 @@ import arrow from '/arrow.webp'
 import { MovieCard } from './MovieCard'
 import {util} from '../util/util'
 
-// This will be replaced with actual data from API call
 export function Section({name,data,loading}){
 
     const topFive = data.slice(0, 2)
@@ -21,10 +20,10 @@ export function Section({name,data,loading}){
                       <div className="w-8 h-8 border-4 border-blue-500 border-dashed rounded-full animate-spin"></div>
                     </div>
                 ) : <div className="flex px-3 py-10 gap-6">
-                    {topFive.map((movie) => (
-                        <MovieCard key={movie.id} data={movie} />
-                    ))}               
-                </div>
+                        {topFive.map((movie) => (
+                            <MovieCard key={movie.id} data={movie} />
+                        ))}               
+                    </div>
                 }
             </div>
             

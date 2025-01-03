@@ -1,16 +1,25 @@
+import { useNavigate } from "react-router"
 import { util } from "../util/util"
 
 export function MovieCard({data}){
-    console.log(data)
+
+    const navigate = useNavigate()
+
+    // NAVIGATE TO PAGE WITH MOVIE ID
+    function handleClick(id){
+        navigate(`/media/${id}`)
+    }
+
     return (
         <>
-            <div className="relative border border-white w-44 h-28">
-                <img src={util.BackDrop(data.backdrop_path)} alt='' className="w-full h-full" />
+            <div className="relative border border-white w-44 h-48" onClick={()=>{
+                handleClick(data.id)
+            }}>
+                <img src={util.BackDrop(data.poster_path)} alt='poster' className="w-full h-full" />
                 <div className="absolute bottom-0 left-1 p-2 rounded">
-                    <div className="text-white text-xs font-poppins">{data.original_title || data.name}</div>
+                    <div className="text-white text-xs font-poppins">{data.title || data.name}</div>
                 </div>
             </div>
-
         </>
     )
 }

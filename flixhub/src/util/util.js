@@ -9,10 +9,15 @@ const util = (function(){
         const size = 'original'
         const backdropPath = url? `${baseUrl}${size}${url}` : ''
 
+
         return backdropPath
     }
 
-    return {capitilalize,BackDrop}
+    function summary(overview) {
+        return overview.length > 150? overview.slice(0, 150) + '...' : overview;
+    }
+
+    return {capitilalize,BackDrop,summary}
 
 })()
 
